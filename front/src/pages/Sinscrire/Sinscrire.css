@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.contner-SinscrirePa {
+  width: 100%;
+  height: 100vh;
+  background-color: aqua;
+}
+.Patient {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+}
+
+.form-sinscrirepa,
+.btn-sinscrirepa {
+  margin: 10px auto;
+  border: 0;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 15px 15px;
+  width: 100%;
+  background-color: rgb(134, 128, 128);
+  cursor: pointer;
+  transition: 0.4s;
+}
+.btn-sinscrirepa {
+  margin: 10px auto;
+  border: 0;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 15px 15px;
+  width: 100%;
+  background: #10c735;
+  color: aliceblue;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.btn-sinscrirepa:hover {
+  border-radius: 0;
+  background: #08651a;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .Patient {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .contner-SinscrirePa {
+    background-color: aqua;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Patient {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+  }
+  .form-sinscrirepa {
+    border: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 12px 12px;
+    max-width: 87vw;
+
+    background-color: rgb(134, 128, 128);
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .nory{color: rgb(254, 0, 0);}
+  .btn-sinscrirepa {
+    margin: 10px auto;
+    border: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px 10px;
+    max-width: 87vw;
+    background: #10c735;
+    color: aliceblue;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .contner-SinscrirePa {
+    margin: auto;
+  }
+}
+
+/* @media screen and (max-width: 280px){ .contner-SinscrirePa{margin: auto;}} */
+
+
+
+@media screen and (max-width: 280px) {
+  .contner-SinscrirePa {
+    width: 100%;
+    height: 95vh;
+    background: none;
+   
+    background-repeat: no-repeat;
+    background-size: 15rem;
+  
+    background-position: bottom;
+  }
+  .Patient {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+  }
+
+
+  .form-sinscrirepa {
+    margin: 10px auto;
+    border: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px 10px;
+    max-width: 87vw;
+    background-color: rgb(134, 128, 128);
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .btn-sinscrirepa {
+    margin: 10px auto;
+    border: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px 10px;
+    max-width: 87vw;
+    background: #10c735;
+    color: aliceblue;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  }

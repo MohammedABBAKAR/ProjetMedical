@@ -1,0 +1,329 @@
+.contner {
+  width: 100%;
+  height: 95vh;
+  background-color: aqua;
+ 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+.tob{color: rgb(255, 65, 65);
+font-size: 1rem;}
+
+.lien {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.lien a {
+  text-decoration: none;
+}
+
+.form-pers {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+}
+.Forme-connecterpa {
+  margin: 10px auto;
+  border: 0;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 15px 15px;
+  width: 100%;
+  background-color: rgb(134, 128, 128);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.btn-connecterpa {
+  margin: 10px auto;
+  border: 0;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 15px 15px;
+  width: 100%;
+  background: #10c735;
+  color: aliceblue;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.btn-connecterpa:hover {
+  border-radius: 0;
+  background: #08651a;
+} 
+
+
+
+
+@media screen and (max-width: 280px) {
+  .contner {
+    width: 100%;
+    height: 95vh;
+    background: none;
+    background-image: url("../../../public/img/Health\ professional\ ");
+    background-repeat: no-repeat;
+    background-size: 15rem;
+  
+    background-position: bottom;
+  }
+  .form-pers {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+  }
+  .form-pers {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+  }
+
+  .Forme-connecterpa {
+    margin: 10px auto;
+    border: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px 10px;
+    max-width: 87vw;
+    background-color: rgb(134, 128, 128);
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .btn-connecterpa {
+    margin: 10px auto;
+    border: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px 10px;
+    max-width: 87vw;
+    background: #10c735;
+    color: aliceblue;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  }
+
+  @media screen and (max-width: 480px) {
+     .contner {
+      width: 100%;
+      height: 95vh;
+      background: none;
+      background-image: url("../../../public/img/3d-business-black-doctor-standing-with-clipboard-and-writing.png");
+      background-repeat: no-repeat;
+      background-size: 10rem;
+      
+      background-position: bottom;
+    } 
+  
+  
+  
+  
+    
+    .form-pers {
+      position: absolute;
+      top: 28%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 243px;
+    }
+  
+    .Forme-connecterpa {
+      margin: 10px auto;
+      border: 0;
+      border-radius: 4px;
+      font-size: 16px;
+      padding: 12px 12px;
+      max-width: 87vw;
+      background-color: rgb(134, 128, 128);
+      cursor: pointer;
+      transition: 0.4s;
+    }
+    .btn-connecterpa {
+      margin: 10px auto;
+      border: 0;
+      border-radius: 4px;
+      font-size: 16px;
+      padding: 12px 12px;
+      max-width: 87vw;
+      background: #10c735;
+      color: aliceblue;
+      cursor: pointer;
+      transition: 0.4s;
+    } 
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media (min-width: 481px) and (max-width: 767px) {
+  .contner {
+    background-color: aqua;
+  }
+  .form-pers {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+  }
+} */
+/* 
+@media (min-width: 768px) and (max-width: 991px) {
+  .contner {
+    background-color: aqua;
+  }
+  .form-pers {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+  }
+} */
+
+@media screen and (max-width: 480px) {
+  /* .contner {
+    width: 100%;
+    height: 95vh;
+    background: none;
+    background-image: url("../../../public/img/Health\ professional\ team-bro.png");
+    background-repeat: no-repeat;
+    background-size: 18rem;
+    
+    background-position: bottom;
+  } */
+
+
+
+
+  /* .form-pers {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+  }
+  .form-pers {
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+  }
+
+  .Forme-connecterpa {
+    margin: 10px;
+    border: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 12px 12px;
+    max-width: 87vw;
+    background-color: rgb(134, 128, 128);
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .btn-connecterpa {
+    margin: 10px;
+    border: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 12px 12px;
+    max-width: 87vw;
+    background: #10c735;
+    color: aliceblue;
+    cursor: pointer;
+    transition: 0.4s;
+  } */
+}
+/* 
+@media screen and (max-width: 280px) {
+  .contner {
+    width: 100%;
+    height: 95vh;
+    background: none;
+    background-image: url("../../../public/img/Health\ professional\ team-bro.png");
+    background-repeat: no-repeat;
+    background-size: 15rem;
+  
+    background-position: bottom;
+  }
+  .form-pers {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+  }
+  .form-pers {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+  }
+
+  .Forme-connecterpa {
+    margin: 10px;
+    border: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px 10px;
+    width: 100%;
+    background-color: rgb(134, 128, 128);
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .btn-connecterpa {
+    margin: 10px;
+    border: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px 10px;
+    width: 100%;
+    background: #10c735;
+    color: aliceblue;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+} */

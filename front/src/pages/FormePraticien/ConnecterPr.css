@@ -1,0 +1,297 @@
+
+.contnerpr {
+  width: 100%;
+  height: 100vh;
+  background-color: aqua;
+}
+
+.lienpr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.lienpr a {
+  text-decoration: none;
+}
+
+.form-pers2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+}
+.Forme-connecterpra {
+  margin: 10px auto;
+  border: 0;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 15px 15px;
+
+  width: 100%;
+  background-color: rgb(134, 128, 128);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.btn-connecterpra {
+  margin: 10px auto;
+  border: 0;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 15px 15px;
+  width: 100%;
+  background: #10c735;
+  color: aliceblue;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.btn-connecterpra:hover {
+  border-radius: 0;
+  background: #08651a;
+}
+
+
+
+@media screen and (max-width: 280px) {
+  .contnerpr {
+    width: 100%;
+    height: 95vh;
+    background-image: url("../../../public/img/DNA-pana.png");
+    background-repeat: no-repeat;
+    background-size: 15rem;
+   
+    background-position: bottom;
+  }
+
+  .form-pers2 {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+  }
+
+  .Forme-connecterpra {
+    margin: 10px auto;
+    border: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px 10px;
+    width: 100%;
+    background-color: rgb(134, 128, 128);
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  .btn-connecterpra {
+    margin: 10px auto;
+    border: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px 10px;
+    width: 100%;
+    background: #10c735;
+    color: aliceblue;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+}
+
+
+
+@media screen and (max-width: 480px) {
+  .contnerpr {
+    width: 100%;
+    height: 95vh;
+    background-image: url("../../../public/img/3d-business-female-doctor-and-male-doctor-standing-together.png");
+    background-repeat: no-repeat;
+    background-size: 12rem;
+  
+    background-position: bottom;
+  }
+
+  .form-pers2 {
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 243px;
+  }
+
+  .Forme-connecterpra {
+    margin: 10px auto;
+    border: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 12px 12px;
+    width: 100%;
+ 
+    background-color: rgb(134, 128, 128);
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  .btn-connecterpra {
+    margin: 10px auto;
+    border: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px 10px;
+    max-width: 100vw;
+    background: #10c735;
+    color: aliceblue;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+} 
+
+
+/* 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .contnerpr {
+    background-color: aqua;
+  }
+  .form-pers2 {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+  }
+} */
+/* 
+@media (min-width: 768px) and (max-width: 991px) {
+  .contnerpr {
+    background-color: aqua;
+    max-width: 100vw;
+  }
+  .form-pers2 {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100vw;
+    width: 350px;
+  }
+} */
+
+/* @media screen and (max-width: 480px) {
+  .contnerpr {
+    width: 100%;
+    height: 95vh;
+    background-image: url("../../../public/img/DNA-pana.png");
+    background-repeat: no-repeat;
+    background-size: 18rem;
+  
+    background-position: bottom;
+  }
+
+  .form-pers2 {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+  }
+
+  .Forme-connecterpra {
+   
+    border: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 12px 12px;
+    max-width: 87vw;
+ 
+    background-color: rgb(134, 128, 128);
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  .btn-connecterpra {
+    margin: 10px;
+    border: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px 10px;
+    max-width: 87vw;
+    background: #10c735;
+    color: aliceblue;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+} */
+
+
+/* 
+
+/* 
+@media screen and (max-width: 280px) {
+  .contnerpr {
+    width: 100%;
+    height: 95vh;
+    background-image: url("../../../public/img/DNA-pana.png");
+    background-repeat: no-repeat;
+    background-size: 15rem;
+   
+    background-position: bottom;
+  }
+
+  .form-pers2 {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+  }
+
+  .Forme-connecterpra {
+    margin: 10px;
+    border: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px 10px;
+    width: 100%;
+    background-color: rgb(134, 128, 128);
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  .btn-connecterpra {
+    margin: 10px;
+    border: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px 10px;
+    width: 100%;
+    background: #10c735;
+    color: aliceblue;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+} */ 
