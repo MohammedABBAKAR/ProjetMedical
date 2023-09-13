@@ -1,14 +1,53 @@
 
 .footer{
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-	row-gap: 1rem;
-	background-color: black;
-	padding-block: 3rem;
+	background-color: rgb(215, 215, 215);
+	justify-content: space-around;
+	
+	flex-wrap: wrap;
+	/* row-gap: 1rem; */
+	
+	padding-block: 4rem;
+	color: black;
+	
+}
+.titr-specialiste a,
+.footer-propos a{
+	text-decoration: none;
+	color: black;
 }
 
-.footer-logo{
+ul li{
+	list-style: none;
+	
+	
+}
+
+
+.titr-specialiste{
+display: flex;
+
+
+}
+
+.icon{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	column-gap: 0.5rem;
+}
+.icon  li a img:hover {
+	color: #000;
+}
+
+.footer-social .icon-social{
+	font-size: 1.7rem;
+	font-weight: 700;
+	color: white;
+	text-transform: uppercase;
+}
+
+/* .footer-logo{
 	font-size: 1.7rem;
 	font-weight: 700;
 	color: white;
@@ -33,4 +72,4 @@
 .footer-links a{
 	font-weight: 700;
 	color: white;
-}
+} */

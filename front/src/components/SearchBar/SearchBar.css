@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* form .FormeMain1{} */
+
+form .btn-main {
+    position: relative;
+    left: -5px;
+    border-radius: 0 25px 25px 0;
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #10c735;
+    color: #fff;
+  }
+   @media screen and (max-width: 280px) {
+   
+  
+    form .FormeMain1 {
+      width: 230px;
+      height: 40px;
+      border: none;
+      outline: none;
+      padding: 0 25px;
+      border-radius: 6px 6px 6px 6px;
+    }
+  
+ }
+
+  @media screen and (max-width: 480px) {
+ 
+  
+    form .FormeMain1 {
+      width: 230px;
+      height: 40px;
+      border: none;
+      outline: none;
+      padding: 0 25px;
+      border-radius: 6px 6px 6px 6px;
+    }
+  
+  
+  }
+  @media (min-width: 750px) and (max-width: 1224px) {
+    form .btn-main {
+      position: relative;
+      left: -5px;
+      border-radius: 0 25px 25px 0;
+      width: 90px;
+      height: 50px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      background: #10c735;
+      color: #fff;
+    }
+  
+    form .FormeMain1 {
+      width: 220px;
+      height: 50px;
+      border: none;
+      outline: none;
+      padding: 0 25px;
+      border-radius: 25px 0 0 25px;
+    }
+  }
+  
+  @media screen and (max-width: 774px) {
+    form .btn-main {
+      display: none;
+      position: relative;
+      left: -5px;
+      border-radius: 0 25px 25px 0;
+      width: 90px;
+      height: 50px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      background: #10c735;
+      color: #fff;
+    }
+  
+    form .FormeMain1 {
+      width: 260px;
+      height: 40px;
+      border: none;
+      outline: none;
+      padding: 0 25px;
+      border-radius: 6px 6px 6px 6px;
+    }
+   
+  }
+  
+  
+  
+  
+  
+ 

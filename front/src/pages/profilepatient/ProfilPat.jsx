@@ -3,8 +3,9 @@ import "./ProfilPa.css";
 
 const ProfilPat = () => {
   return (
-    <div>
+    <div className="">
       <Navbar />
+      <div className="parprofi">
       <div className="contner-all">
         <h2>Mon compte</h2>
         <div>
@@ -19,7 +20,7 @@ const ProfilPat = () => {
           <p>E-mail</p>
           <hr />
           {/* <p>Mot de passe</p> */}
-        
+        </div>
         </div>
       </div>
     </div>

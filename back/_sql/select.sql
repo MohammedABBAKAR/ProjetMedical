@@ -37,22 +37,22 @@
 -- WHERE patient.id = 1
 -- ;
 
-SELECT
-    GROUP_CONCAT(specialty.name) AS specialities,
-    praticien.lastname
-FROM
-    medic.specialty
-JOIN
-    medic.praticien
-JOIN
-    medic.specialty_praticien
-ON
-    specialty_praticien.specialty_id = specialty.id
-AND
-    specialty_praticien.praticien_id = praticien.id
-GROUP BY
-    praticien.id
-;
+-- SELECT
+--     GROUP_CONCAT(specialty.name) AS specialities,
+--     praticien.lastname
+-- FROM
+--     medic.specialty
+-- JOIN
+--     medic.praticien
+-- JOIN
+--     medic.specialty_praticien
+-- ON
+--     specialty_praticien.specialty_id = specialty.id
+-- AND
+--     specialty_praticien.praticien_id = praticien.id
+-- GROUP BY
+--     praticien.id
+-- ;
 
 
 

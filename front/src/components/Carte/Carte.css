@@ -1,0 +1,57 @@
+
+.imagcart{
+
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.react-calendar{
+  
+    border-radius: 5px;
+}
+
+.parcart{
+    background: black;
+    width: fit-content;
+   display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    aspect-ratio: 16/9;
+    flex-grow: 1;
+    color: rgb(138, 141, 144);
+    border-radius: 5px;
+    margin: 35px auto;
+
+}
+.parcart2{
+   
+    display: flex;
+   flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 7px;
+}
+
+.btncart{
+    border: 0;
+    border-radius: 4px;
+    background-color: rgb(43, 184, 81);
+    width: 200px;
+    height: 35px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.imagcart figure{
+    width: 100px;
+    height: 100px;
+    margin: 4px;
+    border-radius: 50%;
+    border: 2px  solid ;
+    overflow: hidden;
+}
+.imagcart figure img{
+    width: 100px;
+    height: 100px;
+  }

@@ -1,17 +1,28 @@
+ /* *{
+    box-shadow: 0 0 0 3px red}  */
 
+.contner-all {
+    
+  width: 60%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0px 300px;
+  gap: 10PX;
+  
+}
 
-
-
-.contner-all{
-    /* position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 280px; */
-    margin: auto  500px;
+hr {
+  width: 90%;
+  margin: 20px;
 }
 
 
-hr{
-    width: 50%;
-}
+ div h3{
+    padding:  15px 0;
+ }
+
+     .parprofi{
+        background-color: aqua;
+     }

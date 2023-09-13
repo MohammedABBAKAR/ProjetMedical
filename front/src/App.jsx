@@ -10,6 +10,8 @@ import ProfilPat from "./pages/profilepatient/ProfilPat";
 import Home from "./pages/home";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Carte from "./components/Carte/Carte";
+import Propos from "./pages/Propos/Propos";
 
 function App() {
   const router = createBrowserRouter([
@@ -40,6 +42,14 @@ function App() {
     {
       path: "profilepatient",
       element: <ProfilPat/>,
+    },
+    {
+      path: "Carte",
+      element: <Carte/>,
+    },
+    {
+      path: "Propos",
+      element: <Propos/>,
     },
   
     
