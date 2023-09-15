@@ -26,3 +26,73 @@ hr {
      .parprofi{
         background-color: aqua;
      }
+     @media screen and (max-width: 280px){
+      .contner-all {
+    
+         width: 60%;
+         height: 100vh;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         margin: 0px 30px;
+         gap: 10PX;
+         
+       }
+       hr {
+         width: 30%;
+         margin: 10px;
+       }
+
+       div h3{
+         padding:  10px 0;
+      }
+     
+
+     }
+
+
+
+     /* @media screen and (max-width: 380px){
+      .contner-all {
+    
+         width: 40%;
+         height: 100vh;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         margin: 0px 90px;
+         gap: 10PX;
+         
+       }
+
+       hr {
+         width: 70%;
+         margin: 20px;
+       }
+       
+ div h3{
+   padding:  15px 0;
+}
+     } */
+     @media screen and (max-width: 783px){
+      .contner-all {
+    
+         width: 60%;
+         height: 100vh;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         margin: 0px 100px;
+         gap: 10PX;
+         
+       }
+
+       hr {
+         width: 70%;
+         margin: 20px;
+       }
+       
+ div h3{
+   padding:  10px 0;
+}
+     }

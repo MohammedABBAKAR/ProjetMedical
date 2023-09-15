@@ -1,0 +1,32 @@
+
+*{
+    text-decoration: none; 
+}
+
+
+
+details{
+  
+    padding: 14px;
+    display: flex;
+   flex-direction: column;
+   text-decoration: none;
+   gap: 9px;
+}
+
+
+.logo-profile{
+    width: 3.5rem;
+    margin: auto;
+}
+.navbar-connextion{
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.link-comte{
+    color: black;
+}
