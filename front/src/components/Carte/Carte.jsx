@@ -3,6 +3,7 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import './Carte.css'
 import Navbar from '../Navbar';
+import Fotter from '../Fotter';
 // import SearchBar from '../SearchBar/SearchBar';
 function Carte() {
      const [data , setData] = useState(new Date ());
@@ -34,7 +35,7 @@ function Carte() {
 
     </div>
     {/* <SearchBar/> */}
-    
+    <Fotter/>
     </div>
   )
 }

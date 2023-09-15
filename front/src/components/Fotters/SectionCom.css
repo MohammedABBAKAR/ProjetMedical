@@ -1,10 +1,82 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
 }
-.sec-fo{
-    width: 45rem;
-	background-color: rgb(255 255 255);
-	margin-inline: auto;
+
+.div-fo {
+  display: flex;
+  justify-content: center;
+}
+.sec-fo {
+  height: 60vh;
+  background-color: rgb(255 255 255);
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2%;
+  gap: 0 2%;
+}
+.sec-fo1 {
+  background-color: rgb(215, 215, 215);
+  max-width: 92%;
+  height: 25vh;
+  border-radius: 4px;
+  padding: 40px 40px  76px;
+  overflow: hidden;
+
+}
+.sec-fo1 p{
+    overflow: hidden;
+    scrollbar-gutter: stable;
+    text-align: center;
+    font-size: 19px;
+line-height: 24px;
+
+}
+.sec-fo2,
+.sec-fo3 {
+  background-color: #04cba8;
+  width: 45%;
+  height: 25vh;
+  border-radius: 4px;
+ display: inline-block;
+ overflow: hidden;
+font-size: 19px;
+line-height: 24px;
+  padding: 40px 40px  76px;
+}
+
+@media screen and (max-width: 480px) {
+    .sec-fo1 p{
+        overflow: hidden;
+        scrollbar-gutter: stable;
+        text-align: center;
+        font-size: 14px;
+    line-height: 24px;
+    
+    }
+    .sec-fo1 {
+      background-color: rgb(215, 215, 215);
+      max-width: 92%;
+      height: 25vh;
+      border-radius: 4px;
+      padding: 30px 30px  56px;
+      overflow: hidden;
+    
+    }
+    .sec-fo2,
+.sec-fo3 {
+  background-color: #04cba8;
+  width: 45%;
+  height: 25vh;
+  border-radius: 4px;
+ display: inline-block;
+ overflow: hidden;
+font-size: 14px;
+line-height: 14px;
+  padding: 30px 30px  66px;
+}
 }
