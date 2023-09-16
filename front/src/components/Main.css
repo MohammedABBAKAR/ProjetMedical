@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  
 }
 
 .box {
@@ -32,6 +33,7 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+ 
 }
 
 .FormeMain1,
@@ -85,6 +87,50 @@ form .btn-main {
     border-radius: 25px 0 0 25px;
   }
 }
+
+
+
+
+
+
+
+.box ul {
+  margin-top: 12px;
+  width: 100%;
+  list-style: none;
+  background-color: #9e9ea4;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  color: var(--text-color);
+position: fixed;
+
+ 
+}
+
+.box ul li {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.box ul li:hover {
+  background-color: rgb(14, 115, 42);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 774px) {
   form .btn-main {
@@ -146,6 +192,7 @@ form .btn-main {
     padding: 0;
     font-size: 20px;
   }
+
 }
 
 
@@ -175,6 +222,7 @@ form .btn-main {
     padding: 0;
     font-size: 17px;
   }
+ 
 }
 
 
@@ -202,4 +250,5 @@ form .btn-main {
     margin: 0 43px 10px;
     padding: 0;
     font-size: 17px;
-  }}
+  }
+}
