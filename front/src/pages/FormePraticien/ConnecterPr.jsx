@@ -21,7 +21,7 @@ const ConnecterPr = () => {
 
   return (
     <>
-      <Navbar />
+    
       <div>
         <div className="contnerpr">
           <form

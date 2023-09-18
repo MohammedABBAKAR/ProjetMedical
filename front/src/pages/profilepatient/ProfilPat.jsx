@@ -26,7 +26,7 @@ const ProfilPat = () => {
         </div>
         </div>
       </div>
-      <Fotter/>
+   
     </div>
   );
 };

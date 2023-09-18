@@ -23,7 +23,7 @@ const OublieMot = () => {
 
 
   return <div>
-    <Navbar/>
+
     <div className="password">
       <form action="" className="mot-pass" onSubmit={handleSubmit(submitForm)}>
 <p><input

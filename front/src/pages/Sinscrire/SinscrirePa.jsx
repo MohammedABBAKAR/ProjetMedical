@@ -21,7 +21,7 @@ const SinscrirePa = () => {
 
   return (
     <div>
-      <Navbar />
+    
       <div className="contner-SinscrirePa">
         <form action="" className="Patient" onSubmit={handleSubmit(submitForm)}>
           <p>

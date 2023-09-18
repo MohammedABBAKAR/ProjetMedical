@@ -21,7 +21,7 @@ const Sinscrirepr = () => {
 
   return (
     <div>
-      <Navbar />
+     
       <div className="contner-SinscrirePra">
         <form
           action=""

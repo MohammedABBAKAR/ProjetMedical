@@ -12,48 +12,56 @@ import Home from "./pages/home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Carte from "./components/Carte/Carte";
 import Propos from "./pages/Propos/Propos";
+import Mainlayout from "./layout/Mainlayout";
 
 function App() {
   const router = createBrowserRouter([
-    {
+   {   path: '/',
+   element:<Mainlayout/>,
+   children:[
+    {    
       path: "/",
-      element: <Home />,
+      element: <Home />
     },
     {
       path: "FormePatient",
-      element: <ConnecterPa />,
+      element: <ConnecterPa />
     },
     {
       path: "FormePraticien",
-      element: <ConnecterPr />,
+      element: <ConnecterPr />
     },
     {
       path: "Sinscrire",
-      element: <SinscrirePa />,
+      element: <SinscrirePa />
     },
     {
       path: "Sinscrirepra",
-      element: <Sinscrirepr/>,
+      element: <Sinscrirepr/>
     },
     {
       path: "Motpass",
-      element: <OublieMot/>,
+      element: <OublieMot/>
     },
     {
       path: "profilepatient",
-      element: <ProfilPat/>,
+      element: <ProfilPat/>
     },
     {
       path: "Carte",
-      element: <Carte/>,
+      element: <Carte/>
     },
     {
       path: "Propos",
-      element: <Propos/>,
+      element: <Propos/>
     },
-  
-    
- 
+
+
+
+
+    ] ,
+
+  }
   ]);
 
   return <RouterProvider router={router} />;

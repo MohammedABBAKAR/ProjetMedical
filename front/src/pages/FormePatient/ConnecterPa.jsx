@@ -23,7 +23,7 @@ const ConnecterPa = () => {
 
   return (
     <div>
-      <Navbar />
+    
 
       <div className="contner">
         <form
