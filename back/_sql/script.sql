@@ -129,7 +129,10 @@ values
 -- patient / praticien / horaire
 INSERT INTO medic.rdv
 values
-(NULL,'2023-12-01',1,2, 5),
+(NULL,'2023-12-01',1,1, 5),
+(NULL,'2023-12-01',2,1, 7),
+(NULL,'2023-12-01',3,1, 9),
+(NULL,'2023-12-01',1,2, 3),
 (NULL,'2023-10-01',2,1, 10),
 (NULL,'2023-09-01',3,3, 1)
 ;

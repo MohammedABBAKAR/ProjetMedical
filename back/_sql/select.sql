@@ -58,26 +58,26 @@
 
 
 
-/*
-SELECT specialty.name
-FROM medic.specialty
-ORDER BY specialty.name 
+
+-- SELECT specialty.name
+-- FROM medic.specialty
+-- ORDER BY specialty.name 
 -- ORDER BY specialty.name DESC;
-LIMIT 6;*/
+--  LIMIT 6;
 
 
 
-/*SELECT rdv.*
-FROM medic.rdv
-JOIN medic.patient
-ON specialty.patient_id = patient.id 
+-- SELECT rdv.*
+-- FROM medic.rdv
+-- JOIN medic.patient
+-- ON specialty.patient_id = patient.id 
 
-JOIN medic.praticien
-ON specialty.praticien_id  = praticien.id
+-- JOIN medic.praticien
+-- ON specialty.praticien_id  = praticien.id
 
 
-JOIN medic.horaire
-ON specialty.horaire_id = horaire.id;*/
+-- JOIN medic.horaire
+-- ON specialty.horaire_id = horaire.id;
 
 
 
@@ -88,33 +88,17 @@ ON specialty.horaire_id = horaire.id;*/
 
 
 
--- SELECT
---  student.hours,
---  GROUP_CONCAT() AS 
+-- -- SELECT
+-- --  student.hours,
+-- --  GROUP_CONCAT() AS 
 
+SELECT GROUP_CONCAT(rdv.horaire_id) AS list_horaires, rdv.daily, rdv.praticien_id, praticien.firstname, praticien.lastname
+FROM medic.rdv
+JOIN medic.praticien
+ON praticien.id = rdv.praticien_id
+WHERE rdv.daily = '2023-12-01'
+AND praticien.id = 1
+GROUP BY rdv.praticien_id;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
--- ON specialty.praticien_id  = classroom.id;
-
-
+SELECT horaire.*
+FROM medic.horaire;

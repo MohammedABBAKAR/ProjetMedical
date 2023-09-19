@@ -13,13 +13,13 @@ function Carte() {
      }
   return (
     <div>
-        <Navbar/>
+        {/* <Navbar/> */}
     <div className='parcart'>
  <div className='parcart2'>
       <div className='imagcart'>
        
         <figure>
-        <img src="../../../public/img/IMG-123.jpg" alt="" />
+        {/* <img src="../../../public/img/IMG-123.jpg" alt="" /> */}
         </figure>
          <div><h3>mohammed abbakar</h3></div>
       </div>
@@ -29,13 +29,13 @@ function Carte() {
       </div>
 
 <Calendar  locale  onChange={onChange} value={data}/>
-{/* {console.log(data)}
+{/* {console.log(data)} */}
 
-{data.toString()} */}
+{/* {data.toString()} */}
 
     </div>
     {/* <SearchBar/> */}
-    <Fotter/>
+    {/* <Fotter/> */}
     </div>
   )
 }
