@@ -7,10 +7,11 @@ import rdvRouter from "./routes/rdvRouter.js";
 import horaireRouter from "./routes/horaireRouter.js";
 
 import specialty_praticienRouter from "./routes/specialty_praticienRouter.js"
-
+import cors from 'cors';
 
 
 import { error } from "node:console";
+import specialtyRouter from "./routes/specialtyRouter.js";
 const app = express();
 
 const router = express.Router();
@@ -22,13 +23,28 @@ app.use(router);
 router.use(express.json());
 
 
+router.use(cors({
+  origin:'http://localhost:5174',
+ }));
+
+// router.use(cors());
+
+http://localhost:1000/
+
+// router.use(cors({
+//   origin:'http://localhost:1000/praticien',
+// }));
 
 
-router.use("/patien",patienRouter);
+
+
+
+router.use("/patient",patienRouter);
 router.use("/praticien",praticienRouter);
 router.use("/rdv",rdvRouter);
 router.use("/horaire",horaireRouter);
 router.use("/specialty_praticien",specialty_praticienRouter);
+router.use("/specialty",specialtyRouter);
 // router.get("/", (req, res) => res.send("coucou mohammed"));
 
 

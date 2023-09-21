@@ -5,8 +5,8 @@ const patienRouter = express.Router();
 patienRouter.get("/", async (req, res) => {
   const query = `
     
-    SELECT patien.*
-    FROM  medic.patien;
+    SELECT patient.*
+    FROM  medic.patient;
  `;
 
   try {

@@ -1,5 +1,6 @@
 import express from "express";
 import dbConnection from "../services/dbConnection.js";
+import cors from 'cors';
 const praticienRouter = express.Router();
 
 praticienRouter.get("/", async (req, res) => {

@@ -1,43 +1,57 @@
-import React ,{useState}from 'react'
+import React ,{ useEffect,useState}from 'react'
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import './Carte.css'
 import Navbar from '../Navbar';
 import Fotter from '../Fotter';
+import { getPraticien } from '../../services/api';
+
+// import {getPraticien} from "../../services/api"
 // import SearchBar from '../SearchBar/SearchBar';
 function Carte() {
      const [data , setData] = useState(new Date ());
-
+     const [Praticien, setPraticien] = useState([]);
      const onChange = data =>{
         setData(data);
      }
+
+     useEffect(() => {
+    
+       getPraticien().then((values) => setPraticien(values.data));
+     }, []);
+
+
+
+
+
+
+
+
   return (
     <div>
         {/* <Navbar/> */}
-    <div className='parcart'>
- <div className='parcart2'>
-      <div className='imagcart'>
-       
-        <figure>
-        {/* <img src="../../../public/img/IMG-123.jpg" alt="" /> */}
-        </figure>
-         <div><h3>mohammed abbakar</h3></div>
-      </div>
-      <p>addresse</p>
-      {/* <p>1 rue ariste briad</p> */}
-      <button className='btncart'  type="button">PRENDRE RENDEZ-VOUS</button>
-      </div>
-
-<Calendar  locale  onChange={onChange} value={data}/>
-{/* {console.log(data)} */}
-
-{/* {data.toString()} */}
-
-    </div>
-    {/* <SearchBar/> */}
-    {/* <Fotter/> */}
-    </div>
-  )
+         <div className='parcart'>
+               <div className='parcart2'>
+                     <div className='imagcart'>
+                     
+                     <figure>
+                     {/* <img src="../../../public/img/IMG-123.jpg" alt="" /> */}
+                     </figure>
+                     { 
+                        Praticien.map((value)=>(<div><h3>{value.firstname}</h3></div>))
+                     } 
+                     </div>
+                     <p>addresse</p>
+                     {
+                        Praticien.map( value => <>
+                           <p>{value.addersse}</p>
+                           <button className='btncart'  type="button">PRENDRE RENDEZ-VOUS</button>         
+                           <Calendar  locale  onChange={onChange} value={data}/> )
+                        </>)
+                     }
+               </div>
+         </div>
+    </div>)
 }
 
-export default Carte
+export default Carte;
