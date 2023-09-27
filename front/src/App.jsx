@@ -13,6 +13,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Carte from "./components/Carte/Carte";
 import Propos from "./pages/Propos/Propos";
 import Mainlayout from "./layout/Mainlayout";
+import { PatientProvider } from "./providers/PatientProvider";
 
 function App() {
   const router = createBrowserRouter([
@@ -64,7 +65,10 @@ function App() {
   }
   ]);
 
-  return <RouterProvider router={router} />;
+  return <PatientProvider>
+
+   <RouterProvider router={router} />;
+   </PatientProvider>
 }
 
 export default App;

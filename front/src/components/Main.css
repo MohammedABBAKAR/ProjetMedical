@@ -94,7 +94,7 @@ form .btn-main {
 
 
 
-.box ul {
+.box ul  {
   margin-top: 12px;
   width: 100%;
   list-style: none;
@@ -108,14 +108,24 @@ position: fixed;
 }
 
 .box ul li {
+  
   padding: 1rem;
   cursor: pointer;
 }
+/* .box ul li  Link{
+  color: black;
+  padding: 1rem;
+  cursor: pointer;
+} */
+
 
 .box ul li:hover {
   background-color: rgb(14, 115, 42);
 }
 
+#link-cart{
+    color: black;
+  }
 
 
 

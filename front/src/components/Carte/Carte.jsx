@@ -20,13 +20,6 @@ function Carte() {
        getPraticien().then((values) => setPraticien(values.data));
      }, []);
 
-
-
-
-
-
-
-
   return (
     <div>
         {/* <Navbar/> */}
@@ -36,14 +29,16 @@ function Carte() {
                      
                      <figure>
                      {/* <img src="../../../public/img/IMG-123.jpg" alt="" /> */}
+                     
                      </figure>
                      { 
                         Praticien.map((value)=>(<div><h3>{value.firstname}</h3></div>))
                      } 
                      </div>
-                     <p>addresse</p>
+                   
                      {
                         Praticien.map( value => <>
+                   
                            <p>{value.addersse}</p>
                            <button className='btncart'  type="button">PRENDRE RENDEZ-VOUS</button>         
                            <Calendar  locale  onChange={onChange} value={data}/> )

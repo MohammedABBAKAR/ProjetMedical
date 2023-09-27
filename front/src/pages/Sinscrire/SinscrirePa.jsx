@@ -3,7 +3,8 @@ import { useForm } from "react-hook-form";
 
 import Navbar from "../../components/Navbar";
 import "./Sinscrire.css";
-
+import {creatpatien} from "../../services/apipa"
+import { useNavigate } from "react-router-dom";
 const SinscrirePa = () => {
   const {
     handleSubmit,
@@ -12,16 +13,38 @@ const SinscrirePa = () => {
     formState: { errors },
   } = useForm();
 
+
+  const navigate = useNavigate();
+
+
   useEffect(() => {
     const watcher = watch((observer) => console.log(observer));
     return () => watcher.unsubscribe();
   }, [watch]);
 
-  const submitForm = (values) => console.log(values);
+
+
+
+
+  const submitForm = async(values) => {
+
+    const responseAPI  = await creatpatien(values);
+    console.log(responseAPI);
+
+
+    window.sessionStorage.setItem('notice',"Account created");
+
+    navigate('/');
+
+
+
+
+    // console.log(values);
+  }
 
   return (
     <div>
-    
+    {/* firstname, :lastname, :birthday, :addersse, :email, :password */}
       <div className="contner-SinscrirePa">
         <form action="" className="Patient" onSubmit={handleSubmit(submitForm)}>
           <p>
@@ -29,7 +52,7 @@ const SinscrirePa = () => {
               type="text"
               placeholder="Prénom"
               className="form-sinscrirepa"
-              {...register("Prénom", {
+              {...register("firstname", {
                 required: "Prénom is required",
                 maxLength: {
                   value: 20,
@@ -41,7 +64,7 @@ const SinscrirePa = () => {
                 },
               })}
             />
-            <span className="tob"> {errors.Prénom?.message}</span>
+            <span className="tob"> {errors.firstname?.message}</span>
           </p>
           <p>
             <input
@@ -49,7 +72,7 @@ const SinscrirePa = () => {
               placeholder="Nom"
               className="form-sinscrirepa"
               {...register(
-                "Nom",
+                "lastname",
                
                 {
                   required: "Nom is required",
@@ -64,18 +87,7 @@ const SinscrirePa = () => {
                 }
               )}
             />
-            <span className="tob"> {errors.Nom?.message}</span>
-          </p>
-          <p>
-            <input
-              type="text"
-              placeholder="Email"
-              className="form-sinscrirepa"
-              {...register("Email", {
-                required: "Email Address is required",
-              })}
-            />
-            <span className="tob">{errors.Email?.message}</span>
+            <span className="tob"> {errors.lastname?.message}</span>
           </p>
           <p>
             <input
@@ -83,26 +95,61 @@ const SinscrirePa = () => {
               placeholder="age"
               id=""
               className="form-sinscrirepa"
-              {...register("age", {
+              {...register("birthday", {
                 required: "Date de naissance is required",
                 min: 18,
                 max: 99,
                 
               })}
             />
-            <span className="tob">{errors.age?.message}</span>
+            <span className="tob">{errors.birthday?.message}</span>
           </p>
+          <p>
+            <input
+              type="text"
+              placeholder="addersse"
+              className="form-sinscrirepa"
+              {...register(
+                "addersse",
+               
+                {
+                  required: "addersse is required",
+                  maxLength: {
+                    value: 20,
+                    message: "addersse too long",
+                  },
+                  minLength: {
+                    value: 2,
+                    message: "addersse is too short",
+                  },
+                }
+              )}
+            />
+            <span className="tob"> {errors.addersse?.message}</span>
+          </p>
+          <p>
+            <input
+              type="text"
+              placeholder="Email"
+              className="form-sinscrirepa"
+              {...register("email", {
+                required: "Email Address is required",
+              })}
+            />
+            <span className="tob">{errors.email?.message}</span>
+          </p>
+       
           <p>
             <input
               type="password"
               placeholder="Password"
               id=""
               className="form-sinscrirepa"
-              {...register("Password", {
+              {...register("password", {
                 required: "Password  is required",  
               })}
             />
-             <span className="tob">{errors.Password?.message}</span>
+             <span className="tob">{errors.password?.message}</span>
           </p>
           <p>
             <input

@@ -19,7 +19,7 @@ lastname VARCHAR(50) NOT NULL,
 birthday    DATE,
 addersse VARCHAR(50) NOT NULL,
 email VARCHAR(50) NOT NULL UNIQUE,
-password VARCHAR (50) NOT NULL
+password VARCHAR (150) NOT NULL
 );
 
 CREATE TABLE medic.praticien(
@@ -28,7 +28,7 @@ firstname VARCHAR(30) NOT NULL,
 lastname VARCHAR(50) NOT NULL,
 addersse VARCHAR(50) NOT NULL,
 email VARCHAR(50) NOT NULL UNIQUE,
-password VARCHAR (50) NOT NULL,
+password VARCHAR (150) NOT NULL,
 image VARCHAR (50) NOT NULL  
 );
 

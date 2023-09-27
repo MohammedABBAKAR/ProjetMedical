@@ -3,8 +3,14 @@ import Navbar from "../../components/Navbar";
 import "./ConnecterPa.css";
 import "../Sinscrire/SinscrirePa.jsx";
 import { useForm } from "react-hook-form";
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import {checkpatien} from "../../services/apipa"
+import { UserContext } from "../../providers/PatientProvider";
+
+
+
+
 
 const ConnecterPa = () => {
   const {
@@ -14,18 +20,50 @@ const ConnecterPa = () => {
     formState: { errors },
   } = useForm();
 
+  const  {user, setUser}= useContext(UserContext);
+
+  const navigate =useNavigate();
+
+  const [message, setMessage] = useState()
+
+
+
   useEffect(() => {
     const watcher = watch((observer) => console.log(observer));
     return () => watcher.unsubscribe();
   }, [watch]);
 
-  const submitForm = (values) => console.log(values);
+
+
+
+  const submitForm = async(values) =>{
+  
+    const responseAPI  = await checkpatien(values);
+  
+  if(responseAPI.status===200){
+
+setUser(responseAPI.data);
+window.sessionStorage.setItem('notice','you are connected');
+navigate('/')
+
+} else {
+  setMessage('Invalid credentials')
+  setTimeout(()=> setMessage(), 5000);
+}
+  
+  
+  
+console.log(values);
+  
+  
+  } 
 
   return (
     <div>
     
 
       <div className="contner">
+      <p>{message}</p>
         <form
           action=""
           className="form-pers"
@@ -37,23 +75,23 @@ const ConnecterPa = () => {
             placeholder="Email"
             id=""
             className="Forme-connecterpa"
-            {...register("Email", {
+            {...register("email", {
               required: "Email Address is required",
             })}
           />
-          <span className="tob">{errors.Email?.message}</span>
+          <span className="tob">{errors.email?.message}</span>
 
           <input
             type="password"
             name="password"
-            placeholder="Password"
+            placeholder="password"
             id=""
             className="Forme-connecterpa"
-            {...register("Password", {
+            {...register("password", {
               required: "Password  is required",
             })}
           />
-          <span className="tob">{errors.Password?.message}</span>
+          <span className="tob">{errors.password?.message}</span>
           <input
             type="submit"
             value="Se connecter"
@@ -66,6 +104,7 @@ const ConnecterPa = () => {
           </div>
         </form>
       </div>
+      <p>{message}</p>
     </div>
   );
 };

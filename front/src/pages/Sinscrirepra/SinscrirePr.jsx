@@ -4,6 +4,9 @@ import { useForm } from "react-hook-form";
 import Navbar from "../../components/Navbar";
 import "./SinscrirePr.css";
 
+
+
+
 const Sinscrirepr = () => {
   const {
     handleSubmit,
@@ -12,6 +15,8 @@ const Sinscrirepr = () => {
     formState: { errors },
   } = useForm();
 
+
+  
   useEffect(() => {
     const watcher = watch((observer) => console.log(observer));
     return () => watcher.unsubscribe();
