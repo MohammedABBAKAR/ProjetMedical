@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { UserContext } from "../providers/PatientProvider";
 // import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 const Navbar = () => {
- 
   const [stmenu, setmenu] = useState("");
+
+  const { user, setUser } = useContext(UserContext);
   return (
+    
     <header className="navbar">
       <Link to="/" className="logo">
         <img
@@ -15,8 +18,16 @@ const Navbar = () => {
           className="logo-imag"
         />
       </Link>
-
+    
       <ul className={`nav-link ${stmenu}`}>
+    { user ? (<>
+      <li>
+          <Link to={"/profilepatient"} className="link-comte">Mon compte</Link>{" "}
+        </li>
+        <li>
+          {" "}
+          <Link to={"/LogoutPatin"} className="link-comte">Déconnexion</Link>{" "}
+        </li></>):(<>
         <li className="dropdown">
           <Link to="/FormePraticien" className="dropbtn">
             Praticien
@@ -27,10 +38,15 @@ const Navbar = () => {
             Patient{" "}
           </Link>
         </li>
-        <li><img className="icon-user" src="../../public/icon/3741756-bussiness-ecommerce-marketplace-onlinestore-store-user_108907.png" alt="" /></li>
-    {/* <li className="icon-user"> <AccountCircleIcon/></li> */}
+        </>)}
+       
+    
+
+      
+
       </ul>
- 
+
+
       <img
         src="../../public/icon/menu.png"
         alt=""
@@ -39,7 +55,6 @@ const Navbar = () => {
           setmenu(stmenu == "" ? "mobile-menu" : "");
         }}
       />
-    
     </header>
   );
 };

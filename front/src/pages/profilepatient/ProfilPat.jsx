@@ -1,13 +1,11 @@
-import Navbar from "../../components/Navbar";
-import Fotter from "../../components/Fotter";
+
 import "./ProfilPa.css";
-import NavbarConnexion from "../../components/Navconnexion/NavbarConnexion";
 
 const ProfilPat = () => {
   return (
     <div className="">
       {/* <Navbar /> */}
-      <NavbarConnexion/>
+     
       <div className="parprofi">
       <div className="contner-all">
         <h2>Mon compte</h2>

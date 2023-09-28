@@ -59,9 +59,11 @@ const Main = () => {
   }
 
   return (
+    
     <div className="box">
+       <h3 className="message">{message}</h3>
       <div className="backg">
-      <p>{message}</p>
+     
         <div className="mains">
           <h1>Rendez-vous avec vos Professionnels</h1>
           <form className="form-main">
@@ -81,9 +83,9 @@ const Main = () => {
               onClick={() => console.log(value)}
             />
           </form>
-          <ul>
+          <ul className="lienmotor">
             {Specialty.filter((element) =>
-              element.name.includes(value.toLowerCase())
+              element.name.toLowerCase().includes(value.toLowerCase())
             ).map((element) => (
               <li onClick={() => setSpecialty([element.name])}>
                 <Link to={`/Carte`} >{element.name}</Link>

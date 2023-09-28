@@ -14,6 +14,7 @@ import Carte from "./components/Carte/Carte";
 import Propos from "./pages/Propos/Propos";
 import Mainlayout from "./layout/Mainlayout";
 import { PatientProvider } from "./providers/PatientProvider";
+import LogoutPatin from "./pages/LogoutPatin/LogoutPatin";
 
 function App() {
   const router = createBrowserRouter([
@@ -56,7 +57,10 @@ function App() {
       path: "Propos",
       element: <Propos/>
     },
-
+    {
+      path: "LogoutPatin",
+      element: <LogoutPatin/>
+    },
 
 
 

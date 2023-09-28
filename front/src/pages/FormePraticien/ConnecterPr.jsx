@@ -60,7 +60,6 @@ const ConnecterPr = () => {
               {" "}
               <Link to={`/Motpass`}>Mot de passe oublié ?</Link>
               <Link to={`/Sinscrirepra`}>S’inscrire</Link>
-              <Link to={`/Carte`}>Carte</Link>
             </div>
           </form>
         </div>
