@@ -46,4 +46,76 @@ specialty_praticien.get("/", async (req, res) => {
   });
 
 
+
+
+
+
+
+
+
+
+  specialty_praticien.post('/register', async(req,res)=>{
+
+    //hacher le mot de passe contenu dans seq .body
+  
+    const bodyHashed = { ...req.body , password: await argon2.hash(req.body.password)}
+    console.log(bodyHashed)
+  
+  // res.send("coucou user")
+  
+  const query = `
+  INSERT INTO medic.praticien_specialty
+  VALUE (NULL,)
+WHERE praticien_id = ?;
+  `;
+  try {
+    // const [results] = await dbConnection.execute(query, bodyHashed);
+    const [results] = await dbConnection.execute(query, bodyHashed );
+    res.status(200).json({
+      status:200,
+      message: 'User created'
+    });
+  } catch (error){
+  
+  return res.status(400).json(
+    {
+      status:400,
+      message: "Error",
+    }
+  )
+  
+  }
+  
+      });
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 export default specialty_praticien;

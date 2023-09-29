@@ -100,7 +100,7 @@ console.log(values);
           <div className="lien">
             <Link to={`/Motpass`}>Mot de passe oublié ?</Link>
             <Link to={`/Sinscrire`}>S’inscrire</Link>
-           
+            <Link to={`/ProfilPratint`}>S’inscrire</Link>
           </div>
         </form>
       </div>

@@ -20,7 +20,7 @@ const  getSpecialty = async (value)=> {
 const  getPraticien = async ()=> {
 
 
-    const requestInfost = new Request("http://localhost:1000/praticien",{
+    const requestInfost = new Request("http://localhost:1000/info",{
         method: "get",
     });
     

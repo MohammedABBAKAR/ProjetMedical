@@ -12,6 +12,7 @@ import cors from 'cors';
 
 import { error } from "node:console";
 import specialtyRouter from "./routes/specialtyRouter.js";
+import infoPraticientRouter from "./routes/infoPraticientRouter.js";
 const app = express();
 
 const router = express.Router();
@@ -47,6 +48,7 @@ router.use("/rdv",rdvRouter);
 router.use("/horaire",horaireRouter);
 router.use("/specialty_praticien",specialty_praticienRouter);
 router.use("/specialty",specialtyRouter);
+router.use("/info",infoPraticientRouter);
 // router.get("/", (req, res) => res.send("coucou mohammed"));
 
 

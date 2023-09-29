@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 
 import Navbar from "../../components/Navbar";
 import "./SinscrirePr.css";
+import { createUser } from "../../services/apiInfo";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -15,14 +17,28 @@ const Sinscrirepr = () => {
     formState: { errors },
   } = useForm();
 
-
+  const navigate = useNavigate();
   
   useEffect(() => {
     const watcher = watch((observer) => console.log(observer));
     return () => watcher.unsubscribe();
   }, [watch]);
 
-  const submitForm = (values) => console.log(values);
+  const submitForm = async(values) =>{
+    
+    const responseAPI  = await createUser(values);
+    console.log(responseAPI);
+    
+    
+    
+    window.sessionStorage.setItem('notice',"Account created");
+    
+    
+    navigate('/');
+    
+    
+    
+    console.log(values);} 
 
   return (
     <div>
@@ -38,15 +54,15 @@ const Sinscrirepr = () => {
               type="text"
               placeholder="Prénom"
               className="form-sinscrirepra"
-              {...register("Prénom", {
-                required: "Prénom is required",
+              {...register("firstname", {
+                required: "firstname is required",
                 maxLength: {
                   value: 20,
-                  message: "Prénom is too long",
+                  message: "firstname is too long",
                 },
                 minLength: {
                   value: 2,
-                  message: "Prénom is too short",
+                  message: "firstname is too short",
                 },
               })}
             />
@@ -57,19 +73,39 @@ const Sinscrirepr = () => {
               type="text"
               placeholder="Nom"
               className="form-sinscrirepra"
-              {...register("Nom", {
-                required: "Nom is required",
+              {...register("lastname", {
+                required: "lastname is required",
                 maxLength: {
                   value: 20,
-                  message: "Nom is too long",
+                  message: "lastname is too long",
                 },
                 minLength: {
                   value: 2,
-                  message: "Nom is too short",
+                  message: "lastname is too short",
                 },
               })}
             />
             <span className="tob"> {errors.Nom?.message}</span>
+          </p>
+          <p>
+            <input
+              type="text"
+              placeholder="addersse"
+              id=""
+              className="form-sinscrirepra"
+              {...register("addersse", {
+                required: "addersse is required",
+                maxLength: {
+                  value: 20,
+                  message: "addersse is too long",
+                },
+                minLength: {
+                  value: 2,
+                  message: "addersse is too short",
+                },
+              })}
+            />
+            <span className="tob">{errors.addersse?.message}</span>
           </p>
           <p>
             <input
@@ -84,35 +120,36 @@ const Sinscrirepr = () => {
           </p>
           <p>
             <input
-              type="text"
-              placeholder="Spécialité"
-              id=""
-              className="form-sinscrirepra"
-              {...register("spécialité", {
-                required: "spécialité is required",
-                maxLength: {
-                  value: 20,
-                  message: "Nom is too long",
-                },
-                minLength: {
-                  value: 2,
-                  message: "Nom is too short",
-                },
-              })}
-            />
-            <span className="tob">{errors.spécialité?.message}</span>
-          </p>
-          <p>
-            <input
               type="password"
-              placeholder="Password"
+              placeholder="password"
               id=""
               className="form-sinscrirepra"
-              {...register("Password", {
-                required: "Password  is required",  
+              {...register("password", {
+                required: "password  is required",  
               })}
             />
              <span className="tob">{errors.Password?.message}</span>
+          </p>
+          <p>
+            <input
+              type="file"
+   
+              placeholder="image"
+              id=""
+              className="form-sinscrirepra"
+              {...register("image", {
+                required: "image is required",
+                maxLength: {
+                  value: 20,
+                  message: "image is too long",
+                },
+                minLength: {
+                  value: 2,
+                  message: "image is too short",
+                },
+              })}
+            />
+            <span className="tob">{errors.addersse?.message}</span>
           </p>
           <p>
             <input

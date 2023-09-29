@@ -15,6 +15,8 @@ import Propos from "./pages/Propos/Propos";
 import Mainlayout from "./layout/Mainlayout";
 import { PatientProvider } from "./providers/PatientProvider";
 import LogoutPatin from "./pages/LogoutPatin/LogoutPatin";
+import ProfilPratint from "./pages/ProfilPratint/ProfilPratint";
+import { PraticienProvider } from "./providers/PraticienProvider";
 
 function App() {
   const router = createBrowserRouter([
@@ -62,6 +64,10 @@ function App() {
       element: <LogoutPatin/>
     },
 
+    {
+      path: "ProfilPratint",
+      element: <ProfilPratint/>
+    },
 
 
     ] ,
@@ -70,8 +76,9 @@ function App() {
   ]);
 
   return <PatientProvider>
-
+<PraticienProvider>
    <RouterProvider router={router} />;
+   </PraticienProvider>
    </PatientProvider>
 }
 
