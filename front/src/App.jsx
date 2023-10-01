@@ -17,6 +17,7 @@ import { PatientProvider } from "./providers/PatientProvider";
 import LogoutPatin from "./pages/LogoutPatin/LogoutPatin";
 import ProfilPratint from "./pages/ProfilPratint/ProfilPratint";
 import { PraticienProvider } from "./providers/PraticienProvider";
+import LogoutPratient from "./pages/LogoutPatin/LogoutPratient";
 
 function App() {
   const router = createBrowserRouter([
@@ -67,6 +68,10 @@ function App() {
     {
       path: "ProfilPratint",
       element: <ProfilPratint/>
+    },
+    {
+      path: "LogoutPratient",
+      element: <LogoutPratient/>
     },
 
 

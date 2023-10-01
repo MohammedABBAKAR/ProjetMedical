@@ -26,6 +26,102 @@ hr {
      .parprofi{
         background-color: aqua;
      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     .ProfilPatient{
+      display: flex;
+      width: 100%;
+      height: 100vh;
+  
+  }
+  
+  .ProfilPatint-1{
+   background-color: rgb(51, 225, 135);
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.2rem;
+  gap: 80px;
+  
+  }
+  .ProfilPatint-2{
+  background-color: rgb(238, 239, 239);
+  width: 80%;
+  height: 100%;
+  text-align: center;
+  }
+  .user{
+      width: 19px;
+  }
+  .photo-pr {margin-top: 15px;}
+  .photo-pr figure{
+      margin-top: 15px;
+      width: 100px;
+      height: 100px;
+      margin: 4px;
+      border-radius: 50%;
+      border: 2px  solid ;
+      overflow: hidden;
+  }
+  .photo-pr figure img{
+      width: 100px;
+      height: 100px;}
+  
+  
+      .info-pro{
+          height: 20%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+       
+      }
+  
+      .info-pro a {
+          color: aliceblue;
+          text-decoration: none;
+      }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
      @media screen and (max-width: 280px){
       .contner-all {
     

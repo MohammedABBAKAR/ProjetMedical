@@ -53,29 +53,3 @@ height: 100%;
         text-decoration: none;
     }
 
-
-    .inp {
-        margin: 10px auto;
-        border: 0;
-        border-radius: 4px;
-        font-size: 16px;
-        padding: 15px 15px;
-      
-        width: 300px;
-        background-color: rgb(134, 128, 128);
-        cursor: pointer;
-        transition: 0.4s;
-      }
-      .btn-pro {
-        margin: 10px auto;
-        margin-left: 10px;
-        border: 0;
-        border-radius: 4px;
-        font-size: 16px;
-        padding: 15px 15px;
-        width: 100px;
-        background: #10c735;
-        color: aliceblue;
-        cursor: pointer;
-        transition: 0.4s;
-      }

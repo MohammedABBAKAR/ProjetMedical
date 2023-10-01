@@ -36,7 +36,7 @@ const ConnecterPr = () => {
     const responseAPI = await checkUser(values);
 
     if (responseAPI.status === 200) {
-      setUser(responseAPI.data);
+      setUserP(responseAPI.data);
       window.sessionStorage.setItem("notice", "you are connected");
       navigat("/");
     } else {

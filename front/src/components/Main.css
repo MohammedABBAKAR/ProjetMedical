@@ -111,14 +111,13 @@ form .btn-main {
   background-color: #9e9ea4;
   border-radius: 5px;
   font-size: 1.2rem;
-  color: var(--text-color);
+  color: #fff;
 position: fixed;
 
  
 }
 
 .box ul li {
-  
   padding: 1rem;
   cursor: pointer;
 }

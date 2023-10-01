@@ -7,9 +7,9 @@ function ProfilPratint() {
 <section className="ProfilPratint-1">
   <div className="photo-pr"><figure></figure></div>
   <ul className="info-pro">
-<li><Link><img className="user" src="/public/icon/home.png" alt="" /> Home</Link></li>
+<li><Link to={"/"}><img className="user" src="/public/icon/home.png" alt="" /> Home</Link></li>
 <li> <Link><img className="user" src="/public/icon/profile_121261.png" alt="" /> Profil</Link></li>
-<li> <Link> <img className="user"  src="/public/icon/déco2.png" alt="" /> Déconnexion</Link></li>
+<li> <Link to={"/LogoutPratient"}> <img className="user"  src="/public/icon/déco2.png" alt="" /> Déconnexion</Link></li>
   </ul>
 </section>
 <section className="ProfilPratint-2">
