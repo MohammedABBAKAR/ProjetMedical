@@ -16,7 +16,7 @@ const Navbar = () => {
     <header className="navbar">
       <Link to="/" className="logo">
         <img
-          src="../../public/img/medical care logo template social media  1.png"
+          src="./img/logo.png"
           alt="logo"
           className="logo-imag"
         />
@@ -59,7 +59,7 @@ const Navbar = () => {
 
 
       <img
-        src="../../public/icon/menu.png"
+        src="./icon/menu.png"
         alt=""
         className="menu-burger"
         onClick={() => {

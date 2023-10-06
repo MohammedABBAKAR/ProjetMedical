@@ -1,7 +1,53 @@
 import { Link } from "react-router-dom"
+import { useEffect } from "react";
 import "./Profil.css"
+import { useForm } from "react-hook-form";
 
 function ProfilPratint() {
+
+  const {
+    formState: { errors },
+    handleSubmit,
+    register,
+    watch,
+  } = useForm();
+
+
+
+  const onSubmit = async() => {
+    
+    
+    
+    
+   
+    console.log(responseAPI);
+
+ 
+
+ 
+ 
+ }
+
+
+
+
+  useEffect(() => {
+
+    const observer = watch (values => console.log(values));
+    
+      return () => {
+       observer.unsubscribe();
+      }
+    }, [watch])
+
+
+
+
+
+
+
+
+
   return (
     <div className="ProfilPratint">
 <section className="ProfilPratint-1">
@@ -15,10 +61,10 @@ function ProfilPratint() {
 <section className="ProfilPratint-2">
 <h3>entrer votre spécialité</h3>
 <div>
-<form action="/action_page.php">
+<form action="/action_page.php" onSubmit={handleSubmit( onSubmit)}>
   <input className="inp" list="browsers" name="browser" />
   <datalist id="browsers">
-    <option value="Anesthésiologie"></option>
+    <option value=" 1 Anesthésiologie"></option>
     <option value="Cardiologie"></option>
     <option value="Dermatologie"></option>
     <option value="Endocrinologie"></option>

@@ -1,4 +1,4 @@
 
 import server from "./server.js";
 
-server.listen(1000);
+server.listen(3000);

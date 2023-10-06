@@ -17,15 +17,6 @@ const Main = () => {
 
 
 
-
-
-
-
-
-
-
-
-
   useEffect( ()=>{
     //si un message existe en session 
     if(window.sessionStorage.getItem("notice")){
@@ -55,6 +46,7 @@ const Main = () => {
 
   function handleChange(event) {
     setValue(event.target.value);
+    // Appel de la fonction getSpecialty() pour obtenir les spécialités correspondantes
     getSpecialty(event.target.value).then((values) => setSpecialty(values.data));
   }
 

@@ -1,55 +1,82 @@
-.ProfilPratint{
-    display: flex;
-    width: 100%;
-    height: 100vh;
-
+.ProfilPratint {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
 }
 
-.ProfilPratint-1{
- background-color: rgb(43, 122, 122);
-width: 20%;
-height: 100%;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: flex-start;
-font-size: 1.2rem;
-gap: 80px;
-
+.ProfilPratint-1 {
+  background-color: rgb(43, 122, 122);
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.2rem;
+  gap: 80px;
 }
-.ProfilPratint-2{
-background-color: aqua;
-width: 80%;
-height: 100%;
+.ProfilPratint-2 {
+  background-color: aqua;
+  width: 80%;
+  height: 100%;
 }
-.user{
-    width: 19px;
+.user {
+  width: 19px;
 }
-.photo-pr {margin-top: 15px;}
-.photo-pr figure{
-    margin-top: 15px;
-    width: 100px;
-    height: 100px;
-    margin: 4px;
-    border-radius: 50%;
-    border: 2px  solid ;
-    overflow: hidden;
+.photo-pr {
+  margin-top: 15px;
 }
-.photo-pr figure img{
-    width: 100px;
-    height: 100px;}
+.photo-pr figure {
+  margin-top: 15px;
+  width: 100px;
+  height: 100px;
+  margin: 4px;
+  border-radius: 50%;
+  border: 2px solid;
+  overflow: hidden;
+}
+.photo-pr figure img {
+  width: 100px;
+  height: 100px;
+}
 
+.info-pro {
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-    .info-pro{
-        height: 20%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-     
-    }
+.info-pro a {
+  color: aliceblue;
+  text-decoration: none;
+}
 
-    .info-pro a {
-        color: aliceblue;
-        text-decoration: none;
-    }
+.inp {
+  margin: 10px auto;
+  border: 0;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 15px 15px;
 
+  width: 300px;
+  background-color: rgb(134, 128, 128);
+  cursor: pointer;
+  transition: 0.4s;
+}
+.btn-pro {
+  margin: 10px auto;
+  margin-left: 10px;
+  border: 0;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 15px 15px;
+  width: 100px;
+  background: #10c735;
+  color: aliceblue;
+  cursor: pointer;
+  transition: 0.4s;
+}

@@ -1,5 +1,9 @@
+const VITE_API_URL = import.meta.env.VITE_API_URL;
+
+
+
 const createUser = async (values) => {
-  const requestInfos = new Request("http://localhost:1000/info/register", {
+  const requestInfos = new Request(`${VITE_API_URL}/info/register`, {
     method: "post",
     headers: {
       "Content-Type": "application/json",
@@ -16,7 +20,7 @@ const createUser = async (values) => {
 
 
 const checkUser = async (values) => {
-  const requestInfos = new Request("http://localhost:1000/info/login", {
+  const requestInfos = new Request(`${VITE_API_URL}/info/login`, {
     method: "post",
     headers: {
       "Content-Type": "application/json",
@@ -30,4 +34,4 @@ const checkUser = async (values) => {
   return respose;
 };
 
-export { createUser, checkUser };
+export { createUser, checkUser,VITE_API_URL };

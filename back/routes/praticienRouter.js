@@ -12,8 +12,13 @@ const praticienRouter = express.Router();
 praticienRouter.get("/", async (req, res) => {
   const query = `
     
-    SELECT praticien.*
-    FROM  medic.praticien;
+    SELECT praticien.*, GROUP_CONCAT(specialty.name) AS specialities
+    FROM  medic.praticien
+    JOIN medic.specialty
+    JOIN medic.specialty_praticien
+    ON specialty_praticien.specialty_id = specialty.id
+    AND specialty_praticien.praticien_id = praticien.id
+    GROUP BY praticien.id;
  `;
 
   try {
@@ -164,24 +169,22 @@ return res.status(400).json(
 
 
 
-    praticienRouter.get('/all/hours',async (req,res)=>{
-
+    praticienRouter.get('/:id/:date/hours',async (req,res)=>{
+      // console.log(req.params.date);
       const allHours = await getAllHours();
-      const notAvailableHours = await getNotAvailableHours();
-
-        const listHoraires = notAvailableHours.shift().list_horaires.split(',');
+      const notAvailableHours = await getNotAvailableHours(req.params.date, req.params.id);
+      const listHoraires = notAvailableHours.shift().list_horaires.split(',');
     
-        // console.log(notAvailableHours.shift().list_horaires.split(','));
-      // const listHoraires = notAvailableHours.list_horaires.split(',');
       const merge = allHours.map( (value, index) => {
-        // console.log(listHoraires.indexOf(''+value.id));
-        if(listHoraires.indexOf(''+value.id) === -1) return value;
+        if(listHoraires.indexOf(''+value.id) === -1) {
+          return {...value, available: true};
+        } else {
+          return {...value, available: false};
+        }
       });
 
       return res.status(200).json({
         data: merge,
-        // data: allHours,
-        // data: notAvailableHours,
       })
 
     });

@@ -1,7 +1,10 @@
+const VITE_API_URL = import.meta.env.VITE_API_URL;
+
+
 const  creatpatien = async(values)=> {
 
 
-    const requestInfos = new Request("http://localhost:1000/patient/register",{
+    const requestInfos = new Request(`${VITE_API_URL}/patient/register`,{
         method: "post",
         headers: { 
             'Content-Type': 'application/json',
@@ -32,7 +35,7 @@ const  creatpatien = async(values)=> {
 
 const checkpatien = async(values)=>{
 
-    const requestInfos = new Request("http://localhost:1000/patient/login",{
+    const requestInfos = new Request(`${VITE_API_URL}/patient/login`,{
 
     method: "post",
     headers: {
@@ -57,4 +60,4 @@ const checkpatien = async(values)=>{
 
 
 
-export {creatpatien, checkpatien} 
+export {creatpatien, checkpatien,VITE_API_URL} 

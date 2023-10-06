@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  
 }
 
 .box {
@@ -9,9 +8,8 @@
   background-image: url(../../public/img/pexels-thirdman-5327653.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-
 }
-.message{
+.message {
   color: #039a21;
   text-align: center;
 }
@@ -19,7 +17,6 @@
 .lienmotor li a {
   text-decoration: none;
 }
-
 
 .backg {
   background-color: rgba(22, 30, 30, 0.345);
@@ -43,7 +40,6 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
- 
 }
 
 .FormeMain1,
@@ -98,13 +94,7 @@ form .btn-main {
   }
 }
 
-
-
-
-
-
-
-.box ul  {
+.box ul {
   margin-top: 12px;
   width: 100%;
   list-style: none;
@@ -112,9 +102,7 @@ form .btn-main {
   border-radius: 5px;
   font-size: 1.2rem;
   color: #fff;
-position: fixed;
-
- 
+  position: fixed;
 }
 
 .box ul li {
@@ -127,29 +115,13 @@ position: fixed;
   cursor: pointer;
 } */
 
-
 .box ul li:hover {
   background-color: rgb(14, 115, 42);
 }
 
-#link-cart{
-    color: black;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#link-cart {
+  color: black;
+}
 
 @media screen and (max-width: 774px) {
   form .btn-main {
@@ -181,15 +153,12 @@ position: fixed;
     font-size: 20px;
   }
 
-
-
   .box {
     background-color: #dbdbdc;
     height: 100vh;
     background-image: url(../../public/img/clip-medical-consultation-online.gif);
     background-size: 30rem;
     background-position: center;
-    
   }
 
   .mains {
@@ -200,8 +169,6 @@ position: fixed;
   }
 
   .backg {
- 
-
     background: none;
     box-shadow: none;
   }
@@ -212,10 +179,7 @@ position: fixed;
     font-size: 20px;
     color: black;
   }
-
 }
-
-
 
 @media screen and (max-width: 480px) {
   .box {
@@ -224,7 +188,6 @@ position: fixed;
     background-image: url(../../public/img/3d-business-female-doctor-and-male-doctor-standing-together.png);
     background-size: 12rem;
     background-position: center;
-    
   }
 
   form .FormeMain1 {
@@ -243,9 +206,7 @@ position: fixed;
     font-size: 17px;
     color: black;
   }
- 
 }
-
 
 @media screen and (max-width: 280px) {
   .box {
@@ -254,7 +215,6 @@ position: fixed;
     background-image: url(../../public/img/3d-business-female-doctor-and-male-doctor-standing-together.png);
     background-size: 12rem;
     background-position: center;
-    
   }
 
   form .FormeMain1 {

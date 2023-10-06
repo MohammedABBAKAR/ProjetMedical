@@ -38,7 +38,7 @@ const ConnecterPr = () => {
     if (responseAPI.status === 200) {
       setUserP(responseAPI.data);
       window.sessionStorage.setItem("notice", "you are connected");
-      navigat("/");
+      navigat("/ProfilPratint");
     } else {
       setMessage("Invalid credentials");
       setTimeout(() => setMessage(), 5000);
