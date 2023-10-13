@@ -111,6 +111,7 @@ JOIN
   const query = `
   INSERT INTO medic.praticien
 VALUE (NULL, :firstname, :lastname, :addersse, :email, :password, :image);
+
   `;
   try {
     // const [results] = await dbConnection.execute(query, bodyHashed);

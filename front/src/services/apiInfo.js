@@ -20,7 +20,7 @@ const createUser = async (values) => {
 
 
 const checkUser = async (values) => {
-  const requestInfos = new Request(`${VITE_API_URL}/info/login`, {
+  const requestInfos = new Request(`${VITE_API_URL}/praticien/login`, {
     method: "post",
     headers: {
       "Content-Type": "application/json",

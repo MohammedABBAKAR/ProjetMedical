@@ -64,6 +64,7 @@ console.log(values);
 
       <div className="contner">
       <p>{message}</p>
+      {/* <p>{user.firstname}</p> */}
         <form
           action=""
           className="form-pers"
@@ -100,7 +101,7 @@ console.log(values);
           <div className="lien">
             <Link to={`/Motpass`}>Mot de passe oublié ?</Link>
             <Link to={`/Sinscrire`}>S’inscrire</Link>
-            <Link to={`/profilepatient`}>S’inscrire</Link>
+            <Link to={`/Testt`}>S’inscrire</Link>
           </div>
         </form>
       </div>

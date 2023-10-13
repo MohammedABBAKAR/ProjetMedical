@@ -52,4 +52,39 @@ specialtyRouter.get("/", async (req, res) => {
   });
 
 
+
+//   specialtyRouter.post('/', async(req,res)=>{
+
+//   //hacher le mot de passe contenu dans seq .body
+
+ 
+
+// // res.send("coucou user")
+
+// const query = `
+// INSERT INTO medic.specialty
+// VALUE (NULL, :specialty_id);
+// `;
+// try {
+//   // const [results] = await dbConnection.execute(query, bodyHashed);
+//   const [results] = await dbConnection.execute(query, bodyHashed );
+//   res.status(200).json({
+//     status:200,
+//     message: 'User created'
+//   });
+// } catch (error){
+
+// return res.status(400).json(
+//   {
+//     status:400,
+//     message: "Error",
+//   }
+// )
+
+// }
+
+//     });
+    
+
+
 export default specialtyRouter;
