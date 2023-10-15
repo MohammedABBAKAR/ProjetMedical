@@ -53,7 +53,7 @@ function ProfilPratint() {
                 alt=""
               />{" "}
              
-             {userP ? `Bonjour ${userP.firstname}` : "Loading..."}
+             {userP ? `${userP.firstname}` : "Loading..."}
 
             </Link>
           </li>
@@ -66,7 +66,7 @@ function ProfilPratint() {
                 alt=""
               />{" "}
              
-             {userP ? `Bonjour ${userP.email}` : "Loading..."}
+             {userP ? ` ${userP.email}` : "Loading..."}
 
             </Link>
           </li>
@@ -81,7 +81,7 @@ function ProfilPratint() {
         </ul>
       </section>
       <section className="ProfilPratint-2">
-        <p> {userP ? `Bonjour ${userP.firstname}` : "Loading..."}</p>
+        <h2 className="probon"> {userP ? `Bonjour ${userP.firstname}👋` : "Loading..."}</h2>
         <h3>entrer votre spécialité</h3>
         {/* <div>
           <form action="/action_page.php" onSubmit={handleSubmit(onSubmit)}>

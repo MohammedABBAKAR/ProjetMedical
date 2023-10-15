@@ -1,6 +1,6 @@
 // import './App.css'
 import ConnecterPa from "./pages/FormePatient/ConnecterPa";
-
+// import ErrorPage from "./pages/EError-page";
 
 import ConnecterPr from "./pages/FormePraticien/ConnecterPr";
 import OublieMot from "./pages/Motpass/OublieMot";
@@ -23,10 +23,13 @@ function App() {
   const router = createBrowserRouter([
    {   path: '/',
    element:<Mainlayout/>,
+   errorElement: <img className="errr" src="../public/img/404 error with people holding the numbers-pana.png" alt="" />,
    children:[
     {    
       path: "/",
-      element: <Home />
+      element: <Home />,
+      // errorElement: <EErrorPage />,
+    
     },
     {
       path: "FormePatient",
