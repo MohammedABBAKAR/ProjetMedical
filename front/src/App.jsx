@@ -19,11 +19,14 @@ import ProfilPratint from "./pages/ProfilPratint/ProfilPratint";
 import { PraticienProvider } from "./providers/PraticienProvider";
 import LogoutPratient from "./pages/LogoutPatin/LogoutPratient";
 import Testt from "./pages/Testt/Testt";
+import EErrorPage from "./pages/Error404/EErrorPage";
+import UpdatePa from "./pages/Updatepa/UpdatePa";
+import ProfilPersoPr from "./pages/ProfilPersoPr/ProfilPersoPr";
 function App() {
   const router = createBrowserRouter([
    {   path: '/',
    element:<Mainlayout/>,
-   errorElement: <img className="errr" src="../public/img/404 error with people holding the numbers-pana.png" alt="" />,
+   errorElement: <EErrorPage />,
    children:[
     {    
       path: "/",
@@ -68,10 +71,7 @@ function App() {
       element: <LogoutPatin/>
     },
 
-    {
-      path: "ProfilPratint",
-      element: <ProfilPratint/>
-    },
+  
     {
       path: "LogoutPratient",
       element: <LogoutPratient/>
@@ -80,10 +80,23 @@ function App() {
       path: "Testt",
       element: <Testt/>
     },
+    {
+      path: "Updatepa/:id",
+      element: <UpdatePa/>
+    },
+ 
 
     ] ,
 
-  }
+  },
+  {
+    path: "ProfilPratint",
+    element: <ProfilPratint/>
+  },
+  {
+    path: "ProfilPersoPr",
+    element: <ProfilPersoPr/>
+  },
   ]);
 
   return <PatientProvider>

@@ -209,6 +209,84 @@ VALUE (NULL, :firstname, :lastname, :addersse, :email, :password, :image);
 
 
 
+      infoPraticientRouter.post('/into', async (req, res) => {
+        const { specialty_id, praticien_id } = req.body; // Assurez-vous d'obtenir ces valeurs à partir de la requête POST
+      
+        const query = `
+          INSERT INTO medic.specialty_praticien (specialty_id, praticien_id)
+          VALUES (?, ?);
+        `;
+      
+        try {
+          const [results] = await dbConnection.execute(query, [specialty_id, praticien_id]);
+          res.status(200).json({
+            status: 200,
+            message: 'Spécialité associée au praticien avec succès'
+          });
+        } catch (error) {
+          console.error(error); // Ajoutez cette ligne pour afficher l'erreur réelle dans la console
+          return res.status(400).json({
+            status: 400,
+            message: "Erreur lors de l'association de la spécialité au praticien"
+          });
+        }
+        
+      });
+      
+
+
+
+
+
+
+
+
+
+
+      infoPraticientRouter.delete("/deletepr", async (req, res) => {
+        try {
+          // Récupérez l'ID du patient à supprimer à partir des paramètres de la requête
+          const { id } = req.body;
+      
+          // Supprimez le patient de la base de données en utilisant l'ID
+          const deleteQuery = "DELETE FROM medic.praticien WHERE id = ?";
+          const [result] = await dbConnection.execute(deleteQuery, [id]);
+      
+          // Vérifiez si des lignes ont été supprimées
+          if (result.affectedRows > 0) {
+            // Supprimez également les données associées, comme les fichiers, s'il y en a
+            await fs.rm(`${uploadDirectory}/${id}`);
+      
+            return res.status(200).json({
+              status: 200,
+              message: "praticien supprimé avec succès",
+            });
+          } else {
+            return res.status(404).json({
+              status: 404,
+              message: "praticien non trouvé",
+            });
+          }
+        } catch (error) {
+          // Renvoyez une erreur en cas d'échec de la suppression
+          return res.status(500).json({
+            status: 500,
+            message: "Erreur lors de la suppression du praticient",
+          });
+        }
+      });
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 export default infoPraticientRouter;

@@ -11,7 +11,7 @@ import { UserContext } from "../../providers/PatientProvider";
 
 
 
-
+// pour que je peux  gérer les champs du formulaire et les erreurs associées
 const ConnecterPa = () => {
   const {
     handleSubmit,
@@ -24,17 +24,20 @@ const ConnecterPa = () => {
 
   const navigate =useNavigate();
 
+
+  // pour gérer un message d'erreur ou de succès  qui peut affiché à l'utilisateur
   const [message, setMessage] = useState()
 
 
-
+  // pour surveiller les changements dans le formulaire 
+  // en utilisant watch et logue ces changements dans la console
   useEffect(() => {
     const watcher = watch((observer) => console.log(observer));
     return () => watcher.unsubscribe();
   }, [watch]);
 
-
-
+  // lorsque le formulaire est soumis par patient j'appelle la fonction submitForm
+  // Elle va effectuer une requête API en utilisant checkpatien
 
   const submitForm = async(values) =>{
   
@@ -43,6 +46,8 @@ const ConnecterPa = () => {
   if(responseAPI.status===200){
 
 setUser(responseAPI.data);
+// stocke un message dans la session du navigateur
+//j'ai stocké  le message avec la clé 'notice'  après l'authentification
 window.sessionStorage.setItem('notice','you are connected');
 navigate('/')
 
@@ -72,12 +77,12 @@ console.log(values);
         >
           <input
             type="email"
-            name="mail"
-            placeholder="Email"
+            name="email"
+            placeholder="email"
             id=""
             className="Forme-connecterpa"
             {...register("email", {
-              required: "Email Address is required",
+              required: "email Address is required",
             })}
           />
           <span className="tob">{errors.email?.message}</span>
@@ -89,7 +94,7 @@ console.log(values);
             id=""
             className="Forme-connecterpa"
             {...register("password", {
-              required: "Password  is required",
+              required: "password  is required",
             })}
           />
           <span className="tob">{errors.password?.message}</span>
@@ -101,7 +106,6 @@ console.log(values);
           <div className="lien">
             <Link to={`/Motpass`}>Mot de passe oublié ?</Link>
             <Link to={`/Sinscrire`}>S’inscrire</Link>
-            <Link to={`/Testt`}>S’inscrire</Link>
           </div>
         </form>
       </div>

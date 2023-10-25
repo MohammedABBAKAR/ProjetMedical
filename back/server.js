@@ -8,7 +8,7 @@ import horaireRouter from "./routes/horaireRouter.js";
 
 import specialty_praticienRouter from "./routes/specialty_praticienRouter.js"
 import cors from 'cors';
-
+// le module http est utilisé pour créer un serveur HTTP 
 
 import { error } from "node:console";
 import specialtyRouter from "./routes/specialtyRouter.js";
@@ -20,6 +20,7 @@ const router = express.Router();
 
 app.use(router);
 
+//ajouter la méthode JSON à toutes les routes,pour  récupérer le body des requêtes
 
 router.use(express.json());
 
@@ -41,7 +42,7 @@ http://localhost:1000/
 
 
 
-
+router.use("/for",patienRouter);
 router.use("/patient",patienRouter);
 router.use("/praticien",praticienRouter);
 router.use("/rdv",rdvRouter);
@@ -143,7 +144,7 @@ router.get('/:id', async(req, res)=>{
 
 
 
-
+//création deu servveur http
 const server = http.createServer(app);
 
 export default server;

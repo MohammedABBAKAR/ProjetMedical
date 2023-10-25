@@ -9,9 +9,11 @@ const Main = () => {
   const [Specialty, setSpecialty] = useState([]);
   const [message, setMessage] = useState();
 
+
+ 
   useEffect(() => {
     
- 
+ // récupérer les  partir de L'API
     // getSpecialty().then((values) => setSpecialty(values.data));
   }, []);
 
@@ -74,6 +76,7 @@ const Main = () => {
               className="btn-main"
               onClick={() => console.log(value)}
             />
+              {/* Mapping sur la liste des spécialités pour filtrer et afficher les éléments pertinents */}
           </form>
           <ul className="lienmotor">
             {Specialty.filter((element) =>
